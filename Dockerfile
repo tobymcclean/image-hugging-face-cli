@@ -9,3 +9,5 @@ RUN apt-get update && \
     pip3 install --upgrade pip && \
     pip install "huggingface_hub[cli]"
 
+USER root
+WORKDIR /data
