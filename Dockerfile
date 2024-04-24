@@ -7,7 +7,8 @@ RUN apt-get update && \
     apt-get install -y libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev && \
     update-ca-certificates --fresh && \
     pip3 install --upgrade pip && \
-    pip install "huggingface_hub[cli]"
+    pip3 install --upgrade certifi && \
+    pip3 install "huggingface_hub[cli]"
 
 USER root
 WORKDIR /data
